@@ -21,7 +21,12 @@ import com.biomhope.glass.face.home.MainActivity;
 import org.greenrobot.eventbus.EventBus;
 
 import butterknife.ButterKnife;
-
+/**
+ * author:BH
+ * create at:2018/9/6
+ * description:
+ *
+ */
 public abstract class BaseFragment extends com.llvision.glass3.framework.core.BaseFragment {
 
     protected final String TAG = this.getClass().getSimpleName();

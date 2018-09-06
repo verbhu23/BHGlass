@@ -10,7 +10,12 @@ import android.widget.Toast;
 import org.greenrobot.eventbus.EventBus;
 
 import butterknife.ButterKnife;
-
+/**
+ * author:BH
+ * create at:2018/9/6
+ * description:
+ *
+ */
 public abstract class BaseActivity extends AppCompatActivity {
 
     protected final String TAG = getClass().getSimpleName();
