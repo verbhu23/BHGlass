@@ -1,0 +1,141 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Dialog_show_bigpic_style" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="AppSplash" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Dialog_style" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="home_tab_radio_button_style">
+        <item name="android:checked">false</item>
+        <item name="android:background">@drawable/selector_radiobutton_bg</item>
+        <item name="android:drawablePadding">4.0dip</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:paddingTop">5.0dip</item>
+        <item name="android:paddingBottom">5.0dip</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">@dimen/testSize14</item>
+        <item name="android:textColor">@color/text_save_style</item>
+
+    </style>
+
+    <style name="ocr_start_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">32.0dip</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/testSize18</item>
+        <item name="android:textColor">@color/common_text_color</item>
+    </style>
+
+    <style name="common_divide_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1.0dip</item>
+        <item name="android:background">@color/line_bg</item>
+    </style>
+
+    <style name="ocr_end_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_marginRight">44.0dip</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/common_text_color</item>
+    </style>
+
+    <style name="set_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/testSize18</item>
+        <item name="android:textColor">@color/text_black_blue_style</item>
+    </style>
+
+    <style name="set_relativelayout_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/set_item_height</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingLeft">8.0dip</item>
+        <item name="android:paddingRight">8.0dip</item>
+        <item name="android:paddingTop">8.0dip</item>
+    </style>
+
+    <style name="face_register_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">24.0dip</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/testSize18</item>
+        <item name="android:textColor">@color/register_text_color</item>
+    </style>
+
+    <style name="tab_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">5.0dip</item>
+        <item name="android:textSize">@dimen/testSize14</item>
+        <item name="android:textColor">@color/text_tab_color</item>
+    </style>
+
+    <style name="PopupWindowBotom">
+        <item name="android:windowEnterAnimation">@anim/add_new_in</item>
+        <item name="android:windowExitAnimation">@anim/add_new_out</item>
+    </style>
+
+    <style name="LoadDialogStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/clr_black</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/ratingbar_normal</item>
+        <item name="colorControlActivated">@color/ratingbar_activated</item>
+    </style>
+
+    <style name="common_switch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/switch_activated_color</item>
+        <item name="colorSwitchThumbNormal">@color/switch_thumb_color</item>
+        <item name="android:colorForeground">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="style_user_assets_style">
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_marginTop">5.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/testSize16</item>
+        <item name="android:textColor">#ff3a9bfd</item>
+    </style>
+
+</resources>

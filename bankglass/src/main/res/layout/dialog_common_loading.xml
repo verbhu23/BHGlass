@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_half_black_transparent">
+
+    <ProgressBar
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="15.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginTop="15.0dip"
+        android:indeterminateDrawable="@drawable/loading_anim_large"/>
+</RelativeLayout>

@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('platform_lib-release.aar'))

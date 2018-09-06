@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--代表外部存储区域的根目录下的文件 Environment.getExternalStorageDirectory()/glassIcons/目录
+    /storage/emulated/0/glassIcons/-->
+    <external-path
+        name="bh_glassIcons"
+        path="glassIcons/" />
+
+</paths>

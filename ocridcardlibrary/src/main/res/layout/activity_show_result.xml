@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/re_et_recogPicture"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:alwaysDrawnWithCache="true"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/et_recogPicture"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="top"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/confirm" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/FrameLayout_activity_show_result"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_recogPicture"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/FrameLayout_toolbar_show_result"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#AAAAAA">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/back"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/action_settings"
+                android:textColor="#CC0000"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

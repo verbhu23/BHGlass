@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/bg"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:background="@drawable/select_icon_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_take_shoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dip"
+            android:text="相机拍摄"
+            android:textColor="@color/text_blue_orange_style"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/bg" />
+
+        <TextView
+            android:id="@+id/tv_album"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dip"
+            android:text="从相册选取"
+            android:textColor="@color/text_blue_orange_style"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginTop="25dip"
+        android:background="@drawable/select_icon_bg"
+        android:gravity="center"
+        android:padding="12dip"
+        android:text="取消"
+        android:textColor="@color/text_blue_orange_style"
+        android:textSize="18sp" />
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16.0dip</dimen>
+    <dimen name="activity_vertical_margin">16.0dip</dimen>
+    <dimen name="bar_height">48.0dip</dimen>
+    <dimen name="set_item_height">50.0dip</dimen>
+    <dimen name="login_account_margin_top">17.0dip</dimen>
+    <dimen name="ocr_compared_img_w_h">135.0dip</dimen>
+
+    <dimen name="testSize10">10.0sp</dimen>
+    <dimen name="testSize12">12.0sp</dimen>
+    <dimen name="testSize13">13.0sp</dimen>
+    <dimen name="testSize14">14.0sp</dimen>
+    <dimen name="testSize15">15.0sp</dimen>
+    <dimen name="testSize16">16.0sp</dimen>
+    <dimen name="testSize18">18.0sp</dimen>
+    <dimen name="testSize19">19.0sp</dimen>
+    <dimen name="testSize20">20.0sp</dimen>
+    <dimen name="testSize21">21.0sp</dimen>
+    <dimen name="testSize22">22.0sp</dimen>
+    <dimen name="testSize25">25.0sp</dimen>
+    <dimen name="testSize26">26.0sp</dimen>
+    <dimen name="testSize28">28.0sp</dimen>
+    <dimen name="testSize30">30.0sp</dimen>
+
+    <dimen name="dimen_01">1dp</dimen>
+    <dimen name="dimen_02">2dp</dimen>
+    <dimen name="dimen_03">3dp</dimen>
+    <dimen name="dimen_04">4dp</dimen>
+    <dimen name="dimen_05">5dp</dimen>
+    <dimen name="dimen_06">6dp</dimen>
+    <dimen name="dimen_07">7dp</dimen>
+    <dimen name="dimen_08">8dp</dimen>
+    <dimen name="dimen_09">9dp</dimen>
+    <dimen name="dimen_10">10dp</dimen>
+    <dimen name="dimen_11">11dp</dimen>
+    <dimen name="dimen_12">12dp</dimen>
+    <dimen name="dimen_13">13dp</dimen>
+    <dimen name="dimen_14">14dp</dimen>
+    <dimen name="dimen_15">15dp</dimen>
+    <dimen name="dimen_16">15dp</dimen>
+    <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_25">25dp</dimen>
+    <dimen name="dimen_30">30dp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
+</resources>

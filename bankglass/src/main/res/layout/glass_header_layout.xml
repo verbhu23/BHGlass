@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/bar_height"
+    android:background="@color/header_bg"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/ib_back"
+        android:layout_width="@dimen/bar_height"
+        android:layout_height="@dimen/bar_height"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrow_left_style"
+            android:gravity="center" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_center_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/testSize21" />
+
+    <TextView
+        android:id="@+id/tv_action_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12.0dip"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text_white_orange_style"
+        android:textSize="@dimen/testSize21"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/ib_action_end"
+        android:layout_width="30.0dip"
+        android:layout_height="30.0dip"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12.0dip"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vip_list_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/glass_header_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120.0dip"
+        android:layout_marginTop="34.0dip"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.0dip"
+            android:background="#ffdddddd" />
+
+        <ImageView
+            android:id="@+id/iv_user_header"
+            android:layout_width="90.0dip"
+            android:layout_height="90.0dip"
+            android:layout_marginBottom="20.0dip"
+            android:layout_marginLeft="22.0dip"
+            android:layout_marginTop="14.0dip"
+            android:background="@drawable/userimg"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50.0dip"
+            android:text="中科博宏"
+            android:textColor="@color/common_text_color"
+            android:textSize="@dimen/testSize18" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.0dip"
+            android:layout_alignParentBottom="true"
+            android:background="#ffdddddd" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_set_recog_mode"
+        style="@style/set_relativelayout_style"
+        android:layout_marginTop="26.0dip">
+
+        <ImageView
+            android:id="@+id/iv_set_recog_mode"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/set_recog_mode" />
+
+        <TextView
+            android:id="@+id/tv_set_recog_mode"
+            style="@style/set_text_style"
+            android:layout_toEndOf="@+id/iv_set_recog_mode"
+            android:text="@string/set_recog_mode" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dip"
+            android:layout_toEndOf="@+id/iv_set_recog_mode"
+            android:background="#ffdddddd" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_set_recog_result_tips"
+        style="@style/set_relativelayout_style">
+
+        <ImageView
+            android:id="@+id/iv_set_recog_result_tips"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/set_recog_result_tips" />
+
+        <TextView
+            android:id="@+id/tv_set_recog_result_tips"
+            style="@style/set_text_style"
+            android:layout_toEndOf="@+id/iv_set_recog_result_tips"
+            android:text="@string/set_recog_result_tips" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dip"
+            android:layout_toEndOf="@+id/iv_set_recog_result_tips"
+            android:background="#ffdddddd" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_set_recoil_register"
+        style="@style/set_relativelayout_style">
+
+        <ImageView
+            android:id="@+id/iv_set_recoil_register"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/set_recoil_register" />
+
+        <TextView
+            android:id="@+id/tv_set_recoil_register"
+            style="@style/set_text_style"
+            android:layout_toEndOf="@+id/iv_set_recoil_register"
+            android:text="@string/set_recoil_register" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dip"
+            android:layout_toEndOf="@+id/iv_set_recoil_register"
+            android:background="#ffdddddd" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_set_about"
+        style="@style/set_relativelayout_style">
+
+        <ImageView
+            android:id="@+id/iv_set_about"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/set_about" />
+
+        <TextView
+            android:id="@+id/tv_set_about"
+            style="@style/set_text_style"
+            android:layout_toEndOf="@+id/iv_set_about"
+            android:text="@string/set_about" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dip"
+            android:layout_toEndOf="@+id/iv_set_about"
+            android:background="#ffdddddd" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_login_out"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_item_height"
+        android:layout_marginTop="26.0dip"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.0dip"
+            android:background="#ffdddddd" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/set_login_out"
+            android:textColor="@color/text_black_blue_style"
+            android:textSize="@dimen/testSize21" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.0dip"
+            android:layout_alignParentBottom="true"
+            android:background="#ffdddddd" />
+    </RelativeLayout>
+
+</LinearLayout>

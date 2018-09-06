@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/vip_list_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/glass_header_layout" />
+
+    <ViewSwitcher
+        android:id="@+id/face_vs_vip"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:inAnimation="@android:anim/fade_in"
+        android:outAnimation="@android:anim/fade_out"
+        android:padding="10dip">
+
+        <TextView
+            android:id="@+id/tv_no_pic_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="请先完成识别采样..."
+            android:textColor="@color/white"
+            android:textSize="@dimen/testSize18" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fastScrollEnabled="true"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="none"
+            android:transcriptMode="normal" />
+
+    </ViewSwitcher>
+
+</LinearLayout>

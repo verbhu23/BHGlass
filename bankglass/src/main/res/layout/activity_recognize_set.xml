@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vip_list_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/glass_header_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52.0dip"
+        android:layout_marginTop="30.0dip"
+        android:background="@color/white">
+
+        <View style="@style/common_divide_line" />
+
+        <TextView
+            android:id="@+id/tv_first_line"
+            style="@style/ocr_start_text_style"
+            tools:text="@string/set_auto_mode" />
+
+        <TextView
+            android:id="@+id/tv_show_all_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:layout_toStartOf="@+id/switch_compat_first_line"
+            android:text="@string/set_glass_show_all_tips"
+            android:textColor="#ff65b5fd"
+            android:textSize="@dimen/testSize12"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switch_compat_first_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25.0dip"
+            android:switchMinWidth="55.0dp"
+            android:switchPadding="10.0dp"
+            android:typeface="normal" />
+
+        <View
+            style="@style/common_divide_line"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_second_layout"
+        android:layout_width="match_parent"
+        android:layout_height="52.0dip"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_second_line"
+            style="@style/ocr_start_text_style"
+            android:text="@string/set_auto_mode" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switch_compat_second_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25.0dip"
+            android:switchMinWidth="55.0dp"
+            android:switchPadding="10.0dp"
+            android:typeface="normal" />
+
+        <View
+            style="@style/common_divide_line"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

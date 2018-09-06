@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/header_area"
+        layout="@layout/glass_header_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_area"
+        android:background="@color/vip_list_bg"
+        android:fillViewport="false"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/icon_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_user_header"
+                    android:layout_width="120.0dip"
+                    android:layout_height="120.0dip"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="12.0dip"
+                    android:layout_marginTop="12.0dip"
+                    android:background="@drawable/userimg"
+                    android:scaleType="fitCenter" />
+
+                <ImageView
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/refresh_icon"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/info_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icon_area"
+                android:layout_marginLeft="36.0dip"
+                android:layout_marginRight="36.0dip"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52.0dip"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/face_register_text_style"
+                        android:text="@string/ocr_recog_name" />
+
+                    <EditText
+                        android:id="@+id/edt_register_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginRight="14.0dip"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="请输入姓名"
+                        android:maxLength="5"
+                        android:maxLines="1"
+                        android:textColor="@color/common_text_color"
+                        android:textColorHint="@color/line_bg"
+                        android:textSize="@dimen/testSize18" />
+                </RelativeLayout>
+
+                <View style="@style/common_divide_line" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52.0dip"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/face_register_text_style"
+                        android:text="@string/ocr_recog_sex" />
+
+                    <Spinner
+                        android:id="@+id/spinner_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:entries="@array/register_sex"
+                        android:spinnerMode="dialog" />
+
+                </RelativeLayout>
+
+                <View style="@style/common_divide_line" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52.0dip"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/face_register_text_style"
+                        android:text="@string/ocr_recog_idcard" />
+
+                    <EditText
+                        android:id="@+id/edt_register_idcard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginRight="14.0dip"
+                        android:background="@null"
+                        android:digits="0123456789xyzXYZ"
+                        android:gravity="end"
+                        android:hint="请输入身份证"
+                        android:inputType="number"
+                        android:maxLength="18"
+                        android:maxLines="1"
+                        android:textColor="@color/common_text_color"
+                        android:textColorHint="@color/line_bg"
+                        android:textSize="@dimen/testSize12" />
+                </RelativeLayout>
+
+                <View style="@style/common_divide_line" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52.0dip"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/face_register_text_style"
+                        android:text="@string/set_register_vip_level" />
+
+                    <Spinner
+                        android:id="@+id/spinner_vip_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:entries="@array/register_vip_level"
+                        android:spinnerMode="dialog" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15.0dip"
+                    android:background="@color/vip_list_bg" />
+
+                <TextView
+                    android:id="@+id/tv_face_register_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="52.0dip"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="@string/face_register_save"
+                    android:textColor="@color/text_save_style"
+                    android:textSize="@dimen/testSize22" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/info_area"
+                android:minHeight="120.0dip">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/face_gallery"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:scrollbarSize="3.0dip"
+                    android:scrollbarThumbHorizontal="@drawable/recyclerview_scrollbar_thumb"
+                    android:scrollbars="horizontal" />
+
+                <RelativeLayout
+                    android:id="@+id/checked_img_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80.0dip"
+                    android:layout_gravity="right|center_vertical"
+                    android:background="@color/clr_transparent_white_80"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_selected_header"
+                        android:layout_width="40.0dip"
+                        android:layout_height="40.0dip"
+                        android:layout_margin="10.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:scaleType="fitCenter" />
+
+                    <ImageView
+                        android:layout_width="40.0dip"
+                        android:layout_height="40.0dip"
+                        android:layout_margin="10.0dip"
+                        android:background="@drawable/register_selected_bg" />
+
+                    <ImageView
+                        android:layout_width="16.0dip"
+                        android:layout_height="16.0dip"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="5.0dip"
+                        android:background="@drawable/register_checked" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

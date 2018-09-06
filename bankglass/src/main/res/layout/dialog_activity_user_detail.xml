@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_user_detail_bg"
+    android:orientation="vertical"
+    android:padding="20.0dip">
+
+    <ImageView
+        android:id="@+id/iv_user_header"
+        android:layout_width="120.0dip"
+        android:layout_height="120.0dip"
+        android:layout_gravity="center_horizontal"
+        tools:background="@drawable/userimg" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5.0dip"
+        tools:text="庄心妍"
+        android:textColor="@color/vip_level_normal"
+        android:textSize="@dimen/testSize18"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.AppCompatRatingBar
+        android:id="@+id/rat_vip_level"
+        style="?android:attr/ratingBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:rating="3"
+        android:theme="@style/RatingBar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26.0dip"
+        android:layout_marginRight="26.0dip"
+        android:layout_marginTop="22.0dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_info_idcard"
+            android:textColor="#ffababab"
+            android:textSize="@dimen/testSize16" />
+
+        <TextView
+            android:id="@+id/tv_user_info_idcard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="25.0dip"
+            android:textColor="#ffababab"
+            android:textSize="@dimen/testSize16"
+            tools:text="42900419880808888" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26.0dip"
+        android:layout_marginRight="26.0dip"
+        android:layout_marginTop="8.0dip">
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_info_family_address"
+            android:textColor="#ffababab"
+            android:textSize="@dimen/testSize16" />
+
+        <TextView
+            android:id="@+id/tv_user_info_family_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="25.0dip"
+            android:layout_toEndOf="@+id/tv_address"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="2"
+            android:textColor="#ffababab"
+            android:textSize="@dimen/testSize16"
+            tools:text="广东省广州市天河区国德大厦1002-1003" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_user_info_total_assets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff3a9bfd"
+                android:textSize="@dimen/testSize30"
+                tools:text="3667" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12.0dip"
+                android:text="@string/user_info_total_assets"
+                android:textColor="#ff3a9bfd"
+                android:textSize="@dimen/testSize18" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_user_assets_terminal"
+                style="@style/style_user_assets_style"
+                tools:text="@string/user_assets_terminal" />
+
+            <TextView
+                android:id="@+id/tv_user_assets_due_on_demand"
+                style="@style/style_user_assets_style"
+                tools:text="@string/user_assets_due_on_demand" />
+
+            <TextView
+                android:id="@+id/tv_user_assets_funds"
+                style="@style/style_user_assets_style"
+                tools:text="@string/user_assets_funds" />
+
+            <TextView
+                android:id="@+id/tv_user_assets_manage_money"
+                style="@style/style_user_assets_style"
+                tools:text="@string/user_assets_manage_money" />
+
+            <TextView
+                android:id="@+id/tv_user_assets_risk"
+                style="@style/style_user_assets_style"
+                tools:text="@string/user_assets_risk" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
