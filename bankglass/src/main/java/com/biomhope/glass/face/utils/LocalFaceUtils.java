@@ -44,7 +44,6 @@ public class LocalFaceUtils {
         byte[] features = new byte[1048576];
         int size = Math.min(list.size(), 1024);
 
-
         for (int i = 0; i < size; ++i) {
             System.arraycopy((list.get(i)).feature, 0, features, 1024 * i, 1024);
         }

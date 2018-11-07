@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#2367ec</color>
+    <color name="colorPrimaryDark">#b4399BFE</color>
+    <color name="colorAccent">#b4399BFE</color>
+    <color name="status_bar">#2367ec</color>
     <color name="tab_press_bg">#ffD9D9D9</color>
     <color name="splash_text_color">#ffaeaeae</color>
     <color name="header_bg">#ff399BFE</color>
@@ -13,9 +14,10 @@
     <color name="clr_login_frame_light">#ffececec</color>
     <color name="clr_login_frame_weight">#ffb2b2b2</color>
     <color name="clr_login_btn_disabled">#ffcccccc</color>
-    <color name="clr_login_btn_normal">#ff23b8bc</color>
-    <color name="clr_login_btn_normal_70">#b423b8bc</color>
+    <color name="clr_login_btn_normal">#ff399BFE</color>
+    <color name="clr_login_btn_normal_70">#b4399BFE</color>
     <color name="clr_login_input_bg">#fffcfcfc</color>
+    <color name="clr_grey_7">#ffb4b4b4</color>
     <color name="white">#ffffffff</color>
     <color name="register_text_color">#ffc8c8c8</color>
     <color name="line_bg">#ffdddddd</color>
@@ -28,9 +30,21 @@
     <color name="ratingbar_activated">#ffFECF43</color>
     <color name="ratingbar_normal">#ffb2b2b2</color>
     <color name="common_text_color">#ff525252</color>
-    <color name="vip_level_normal">#ff399BFE</color>
+    <color name="vip_level_normal">#ff999999</color>
     <color name="vip_level_height">#ffFECF43</color>
     <color name="switch_thumb_color">#ffaeaeae</color>
     <color name="switch_activated_color">#ff399BFE</color>
-    <color name="bg_downloading_progressbar">#ff399BFE</color>
+    <color name="bg_normal_progressbar">#ffE0751D</color>
+    <color name="video_playter_bg">#ff333333</color>
+    <color name="similarity_progress_color">#ffd13224</color>
+    <color name="bg_secondary_progressbar">#ffaeaeae</color>
+    <color name="sim_face_vip_text">#ffF49E23</color>
+    <color name="sim_face_normal_text">#ff999999</color>
+    <color name="glass_bg_stroke_color">#ff34C3E3</color>
+    <color name="glass_common_text_color">#ff999999</color>
+    <color name="glass_common_layout_stroke_color">#ffdddddd</color>
+    <color name="face_lib_menu_color_n">#ff34C3E3</color>
+    <color name="face_lib_menu_color_p">#ffd13224</color>
+    <color name="add_camera_base_blue">#ff25b7bc</color>
+    <color name="cancel_send_voice">#ff953331</color>
 </resources>

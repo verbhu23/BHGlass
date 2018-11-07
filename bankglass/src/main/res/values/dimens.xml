@@ -5,7 +5,15 @@
     <dimen name="bar_height">48.0dip</dimen>
     <dimen name="set_item_height">50.0dip</dimen>
     <dimen name="login_account_margin_top">17.0dip</dimen>
-    <dimen name="ocr_compared_img_w_h">135.0dip</dimen>
+    <dimen name="ocr_compared_img_w_h">115.0dip</dimen>
+
+    <!--<dimen name="BIG_DISTANCE">20.0dip</dimen>-->
+    <!--<dimen name="BIG_FONT">16.0sp</dimen>-->
+    <!--<dimen name="LARGE_FONT">18.0sp</dimen>-->
+    <!--<dimen name="MID_DISTANCE">15.0dip</dimen>-->
+    <!--<dimen name="MID_FONT">14.0sp</dimen>-->
+    <!--<dimen name="SMALL_DISTANCE">10.0dip</dimen>-->
+    <!--<dimen name="SMALL_FONT">12.0sp</dimen>-->
 
     <dimen name="testSize10">10.0sp</dimen>
     <dimen name="testSize12">12.0sp</dimen>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/similarity_face_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3.0dp"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="3.0dp"
+    tools:background="@drawable/bg_face_sim_vip">
+
+    <ImageView
+        android:id="@+id/iv_thumbnail_similarity"
+        android:layout_width="76.0dip"
+        android:layout_height="76.0dip"
+        android:layout_margin="5.0dp"
+        android:scaleType="center"
+        tools:background="@drawable/pic_z" />
+
+    <TextView
+        android:id="@+id/face_result_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8.0dp"
+        android:layout_marginTop="6.0dp"
+        android:layout_toRightOf="@+id/iv_thumbnail_similarity"
+        android:singleLine="true"
+        android:textColor="@color/clr_black"
+        android:textSize="@dimen/testSize14"
+        tools:text="刘德华" />
+
+    <TextView
+        android:id="@+id/face_result_item_idcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/face_result_item_name"
+        android:layout_marginStart="8.0dp"
+        android:layout_marginTop="3.0dp"
+        android:layout_toRightOf="@+id/iv_thumbnail_similarity"
+        android:textColor="#34C3E3"
+        android:textSize="@dimen/testSize12"
+        tools:text="4545456456456454545456" />
+
+    <TextView
+        android:id="@+id/face_result_item_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_thumbnail_similarity"
+        android:layout_marginStart="8.0dp"
+        android:layout_toRightOf="@+id/iv_thumbnail_similarity"
+        android:paddingBottom="3.0dp"
+        android:paddingLeft="8.0dp"
+        android:paddingRight="8.0dp"
+        android:paddingTop="3.0dp"
+        android:textSize="@dimen/testSize14"
+        tools:background="@drawable/bg_face_sim_vip_txt"
+        tools:text="VIP" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="15.0dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_face_similarity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/vip_level_normal"
+            android:textSize="@dimen/testSize18"
+            android:textStyle="italic"
+            tools:text="80%" />
+
+        <ProgressBar
+            android:id="@+id/pg_similarity_progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="30.0dp"
+            android:layout_height="4.0dp"
+            android:layout_marginTop="5.0dp"
+            android:max="100"
+            android:progressDrawable="@drawable/progress_img"
+            tools:progress="80" />
+    </LinearLayout>
+
+</RelativeLayout>

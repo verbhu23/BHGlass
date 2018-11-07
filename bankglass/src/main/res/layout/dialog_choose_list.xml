@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="55dip"
+        android:gravity="center_vertical"
+        android:paddingLeft="12.0dip"
+        android:paddingRight="12.0dip"
+        android:text="请选择证件类型"
+        android:textColor="@color/add_camera_base_blue"
+        android:textSize="@dimen/testSize21" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/add_camera_base_blue" />
+
+    <ListView
+        android:id="@+id/card_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#ffb9c8d7"
+        android:dividerHeight="1.0dip"
+        android:listSelector="@android:color/transparent" />
+
+</LinearLayout>

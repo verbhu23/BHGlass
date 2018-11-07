@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header_layout"
+        layout="@layout/glass_header_layout" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/browse_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@+id/header_layout"
+        android:fastScrollEnabled="true"
+        android:paddingBottom="10.0dip"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="none"
+        android:transcriptMode="normal" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="#ffdddddd" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60.0dip">
+
+            <ImageView
+                android:id="@+id/iv_switch_voice"
+                android:layout_width="40.0dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="5.0dip"
+                android:src="@drawable/btn_voice"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/send_msg_aera"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/iv_switch_voice">
+
+                <EditText
+                    android:id="@+id/edt_sendmsg_expert"
+                    android:layout_width="fill_parent"
+                    android:layout_height="43.0dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/send_layout"
+                    android:background="@drawable/login_edit_normal"
+                    android:cursorVisible="true"
+                    android:imeOptions="actionSend"
+                    android:paddingStart="10.0dip"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null"
+                    android:textSize="18.0sp" />
+
+                <com.biomhope.glass.face.home.session.audio.AudioRecordButton
+                    android:id="@+id/btn_audio_record"
+                    android:layout_width="fill_parent"
+                    android:layout_height="43.0dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/send_layout"
+                    android:background="@drawable/login_edit_normal"
+                    android:gravity="center"
+                    android:longClickable="true"
+                    android:text="@string/hang_up_finsh"
+                    android:textColor="@color/common_text_color"
+                    android:textSize="@dimen/testSize16"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/send_layout"
+                    android:layout_width="60.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn_send"
+                        android:layout_width="60.0dip"
+                        android:layout_height="40.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:background="@drawable/chat_send_btn"
+                        android:text="@string/send"
+                        android:textColor="@color/text_white_orange_style"
+                        android:textSize="@dimen/testSize16"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/image_more"
+                        android:layout_width="55.0dip"
+                        android:layout_height="55.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignRight="@+id/btn_send"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:src="@drawable/btn_rich_text" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!-- 选中并删除聊天布局 -->
+            <LinearLayout
+                android:id="@+id/delete_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="60.0dip"
+                android:layout_alignParentBottom="true"
+                android:background="#b0000000"
+                android:clickable="false"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/cancel_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/all_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="@string/select_all"
+                    android:textColor="@color/white"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/delete_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="@string/delete"
+                    android:textColor="@color/white"
+                    android:textSize="16.0dip" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_moer_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="#ffdddddd" />
+
+        <LinearLayout
+            android:id="@+id/layout_more"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="10.0dip"
+            android:paddingLeft="35.0dip"
+            android:paddingRight="35.0dip"
+            android:paddingTop="10.0dip"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/photo_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="45.0dip"
+                    android:layout_height="45.0dip"
+                    android:background="@drawable/bg_expert_session_take_photo"
+                    android:padding="8.0dip"
+                    android:src="@drawable/album_session" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3.0dip"
+                    android:text="照片"
+                    android:textColor="#6F7377"
+                    android:textSize="@dimen/testSize14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pictures_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="45.0dip"
+                    android:layout_height="45.0dip"
+                    android:background="@drawable/bg_expert_session_take_photo"
+                    android:padding="8.0dip"
+                    android:src="@drawable/take_photo_session" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3.0dip"
+                    android:text="拍摄"
+                    android:textColor="#6F7377"
+                    android:textSize="@dimen/testSize14" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

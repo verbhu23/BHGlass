@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scanfailed_qrcode_tip"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="55dip"
+        android:gravity="center_vertical"
+        android:paddingLeft="13.0dip"
+        android:paddingRight="13.0dip"
+        android:text="比对结果"
+        android:textColor="@color/add_camera_base_blue"
+        android:textSize="@dimen/testSize18" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/add_camera_base_blue" />
+
+    <TextView
+        android:id="@+id/tv_show_tips"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:gravity="center"
+        android:textColor="@color/clr_black"
+        android:textSize="@dimen/testSize18"
+        tools:text="dajskdjskldjkslajdksljdksljlks" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ffd9d9d9" />
+
+    <TextView
+        android:id="@+id/setup_btn_close"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10.0dip"
+        android:text="OK"
+        android:textColor="@color/text_blue_orange_style"
+        android:textSize="@dimen/testSize18" />
+</LinearLayout>

@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import com.biomhope.glass.face.R;
 import com.biomhope.glass.face.global.Constants;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
@@ -52,11 +53,9 @@ public class CommonUtil {
 
         long time = System.currentTimeMillis();
         long temp = time - lastClickTime;
-
         if (temp > 0 && temp < MIN_CLICK_DELAY_TIME) {
             return true;
         }
-
         lastClickTime = time;
         return false;
     }
@@ -111,7 +110,6 @@ public class CommonUtil {
         }
         return null;
     }
-
 
     // 自动生成服务端所需id
     @SuppressLint("SimpleDateFormat")
@@ -181,37 +179,20 @@ public class CommonUtil {
         return outMetrics.heightPixels;
     }
 
-    /**
-     * 禁止EditText输入空格
-     */
-    public static void setEditTextInhibitInputSpace(EditText editText) {
-        InputFilter filter = new InputFilter() {
-            @Override
-            public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
-                if (source.equals(" ")) return "";
-                else return null;
-            }
-        };
-        editText.setFilters(new InputFilter[]{filter});
+    public static int dp2px(Context context, float dpValue) {
+        float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
     }
 
-    /**
-     * 禁止EditText输入特殊字符
-     */
-    public static void setEditTextInhibitInputSpeChat(EditText editText) {
-
-        InputFilter filter = new InputFilter() {
-            @Override
-            public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
-                String speChat = "[`~!@#$%^&*()+=|{}':;',\\[\\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]";
-                Pattern pattern = Pattern.compile(speChat);
-                Matcher matcher = pattern.matcher(source.toString());
-                if (matcher.find()) return "";
-                else return null;
+    public static void showKeyboard(Context context, EditText editText) {
+        try {
+            InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+            if (imm != null) {
+                imm.showSoftInput(editText, 0);
             }
-        };
-        editText.setFilters(new InputFilter[]{filter});
-
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -222,6 +203,17 @@ public class CommonUtil {
             InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
             if (imm != null) {
                 imm.hideSoftInputFromWindow(context.getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void hideKeyboard(Context context, EditText editText) {
+        try {
+            InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+            if (imm != null) {
+                imm.hideSoftInputFromWindow(editText.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -245,37 +237,44 @@ public class CommonUtil {
             activity.finish();
     }
 
-    public static void showRequestPermissionDialog(final String requestMsg, final Activity activity) {
-        new AlertDialog.Builder(activity)
-                .setMessage(requestMsg)
-                .setPositiveButton("去授权", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                        // 引导用户至设置页手动授权
-                        Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                        Uri uri = Uri.fromParts("package", activity.getApplicationContext().getPackageName(), null);
-                        intent.setData(uri);
-                        activity.startActivity(intent);
-                    }
-                })
-                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                })
-                .create().show();
+    // 加载本地图片
+    @SuppressLint("CheckResult")
+    public static void loadLocalPic(Context context, String imgPath, ImageView imageView) {
+        RequestOptions requestOptions = new RequestOptions()
+                .placeholder(R.drawable.img_loading)
+                .error(R.drawable.img_load_failed);
+        Glide.with(context)
+                .load("file://" + imgPath)
+                .transition(new DrawableTransitionOptions().crossFade(250))
+                .apply(requestOptions)
+                .into(imageView);
     }
 
-    public static void loadBitmap(Context context, String imgPath, boolean isFile, int placeResourceId, ImageView imageView) {
-        if (isFile) {
-            imgPath = "file://" + imgPath;
-        }
+    // 加载网络图片
+    @SuppressLint("CheckResult")
+    public static void loadOnlinePic(Context context, String imgPath, ImageView imageView) {
+        RequestOptions requestOptions = new RequestOptions()
+                .placeholder(R.drawable.img_loading)
+                .error(R.drawable.img_load_failed)
+                .diskCacheStrategy(DiskCacheStrategy.RESOURCE);
         Glide.with(context)
                 .load(imgPath)
                 .transition(new DrawableTransitionOptions().crossFade(250))
-                .apply(new RequestOptions().bitmapTransform(new CircleCrop()).placeholder(placeResourceId))
+                .apply(requestOptions)
+                .into(imageView);
+    }
+
+    // 加载圆形图
+    @SuppressLint("CheckResult")
+    public static void loadCircleBitmap(Context context, String imgPath, ImageView imageView) {
+        RequestOptions requestOptions = new RequestOptions();
+        requestOptions.placeholder(R.drawable.img_loading);
+        requestOptions.error(R.drawable.img_load_failed);
+        requestOptions.bitmapTransform(new CircleCrop());
+        Glide.with(context)
+                .load(imgPath)
+                .transition(new DrawableTransitionOptions().crossFade(250))
+                .apply(requestOptions)
                 .into(imageView);
     }
 

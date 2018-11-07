@@ -1,52 +1,28 @@
 <resources>
     <string name="app_name">人脸识别</string>
 
-    <string name="company_name">广州冠宣科技有限公司</string>
-    <string name="face_register_save">保存</string>
-    <string name="face_register_success">上传成功</string>
-    <string name="net_status_error">网络错误</string>
-    <string name="title_page_3">人脸识别</string>
-    <string name="title_page_3_1">要客识别</string>
+    <string name="company_name">吉林省吉汽网络科技有限公司</string>
 
-    <!-- 底部tab -->
-    <string name="tab_face_register">人脸注册</string>
-    <string name="tab_ocr_function">人证比对</string>
-    <string name="tab_main_list">主列表</string>
-    <string name="tab_video_actived">视频交互</string>
-    <string name="tab_settings">设置</string>
+    <!-- 登录界面 -->
+    <string name="login_username">User ID</string>
+    <string name="login_password">Password</string>
+    <string name="login_password_confirm">RePassword</string>
+    <string name="login_confirm">Log in</string>
+    <string name="login_auto">Remember me</string>
+    <string name="btn_reset_pw">Forgot password</string>
+    <string name="btn_sign_up">Sign up</string>
+    <string name="btn_sign_up_finish">Done</string>
+    <string name="btn_password_find">Find password</string>
 
-    <!-- 设置 -->
-    <string name="set_recog_mode">识别模式</string>
-    <string name="set_recog_result_tips">识别结果提示</string>
-    <string name="set_recoil_register">手动人脸注册</string>
-    <string name="set_about">关于</string>
-    <string name="set_login_out">退出登录</string>
-    <string name="set_register_finish">完成</string>
-    <string name="set_register_icon">头像</string>
-    <string name="set_register_name">姓名</string>
-    <string name="set_register_idcard">身份证号</string>
-    <string name="set_register_vip_level">VIP等级</string>
-    <string name="set_auto_mode">自动模式</string>
-    <string name="set_glass_show_all">眼镜端显示</string>
-    <string name="set_glass_show_all_tips">(显示全部结果详情)</string>
-    <string name="set_warning_tone">提示音</string>
-    <string name="user_info_idcard">证件号码</string>
-    <string name="user_info_family_address">家庭住址</string>
-    <string name="user_info_total_assets">总资产(万元)</string>
-    <string name="user_assets_terminal">定期:</string>
-    <string name="user_assets_due_on_demand">活期:</string>
-    <string name="user_assets_funds">基金:</string>
-    <string name="user_assets_manage_money">理财:</string>
-    <string name="user_assets_risk">风险:</string>
-    <string name="user_detail_error">保密</string>
-    <string name="ocr_self">本人</string>
-    <string name="ocr_is_self">是</string>
-    <string name="ocr_not_self">否</string>
-    <string name="ocr_approve_sim">认证相似度</string>
-    <string name="ocr_recog_name">姓名</string>
-    <string name="ocr_recog_sex">性别</string>
-    <string name="ocr_recog_birth_date">出生日期</string>
-    <string name="ocr_recog_family_address">家庭住址</string>
-    <string name="ocr_recog_idcard">身份证号码</string>
-    <string name="glass_tips_pause_recognize">暂停识别</string>
+    <string name="user_type_vip">VIP List</string>
+    <string name="user_type_com">Staff</string>
+    <string name="user_type_black">Black List</string>
+
+    <string name="send">Send</string>
+    <string name="down_open">Tap to open</string>
+    <string name="down_point">Tap to input...</string>
+    <string name="cancel">Cancel</string>
+    <string name="select_all">Select all</string>
+    <string name="delete">Delete</string>
+    <string name="down_and_say">Tap and hold to speak</string>
 </resources>

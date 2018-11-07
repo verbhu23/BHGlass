@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="150.0dip"
+    android:layout_height="150.0dip"
+    android:layout_margin="15.0dip"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/dm_iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@drawable/yuyin_voice_1" />
+
+    <TextView
+        android:id="@+id/dm_tv_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8.0dip"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/testSize14"
+        tools:background="@color/cancel_send_voice"
+        tools:text="@string/up_for_cancel" />
+
+</RelativeLayout>

@@ -23,8 +23,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="请先完成识别采样..."
-            android:textColor="@color/white"
-            android:textSize="@dimen/testSize18" />
+            android:textColor="@color/text_tab_color"
+            android:textSize="@dimen/testSize16" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerview"

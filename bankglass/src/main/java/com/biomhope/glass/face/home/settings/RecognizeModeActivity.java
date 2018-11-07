@@ -2,21 +2,22 @@ package com.biomhope.glass.face.home.settings;
 
 import android.os.Bundle;
 import android.support.v7.widget.SwitchCompat;
-import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.biomhope.glass.face.R;
-import com.biomhope.glass.face.base.BaseActivity;
+import com.biomhope.glass.face.global.BaseActivity;
+import com.biomhope.glass.face.utils.SharedPreferencesUtils;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 
 public class RecognizeModeActivity extends BaseActivity {
 
-    private boolean isOpenAutoMode = false;
+    private boolean isOpenAutoMode;
+    private boolean recog_mode;
 
     @BindView(R.id.ib_back)
     RelativeLayout ib_back;
@@ -45,13 +46,23 @@ public class RecognizeModeActivity extends BaseActivity {
         ib_back.setVisibility(View.VISIBLE);
         tv_center_title.setText(getResources().getString(R.string.set_recog_mode));
         tv_first_line.setText(getResources().getString(R.string.set_auto_mode));
+        recog_mode = (boolean) SharedPreferencesUtils.get(this, "recog_mode", true);
+        isOpenAutoMode = recog_mode;
+        switch_compat_first_line.setChecked(isOpenAutoMode);
         switch_compat_first_line.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 isOpenAutoMode = isChecked;
-                Log.i(TAG, "onCheckedChanged: isChecked = " + isChecked);
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (isOpenAutoMode != recog_mode) {
+            SharedPreferencesUtils.put(this, "recog_mode", isOpenAutoMode);
+        }
+        super.onDestroy();
     }
 
     @Override

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vip_list_bg">
+
+    <include
+        android:id="@+id/header_layout"
+        layout="@layout/glass_header_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_layout"
+        android:fadeScrollbars="true"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34.0dip"
+                android:background="@drawable/bg_common_layout_stroke">
+
+                <ImageView
+                    android:id="@+id/iv_user_header"
+                    android:layout_width="100.0dip"
+                    android:layout_height="100.0dip"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="10.0dip"
+                    android:layout_marginEnd="20.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:scaleType="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="32.0dip"
+                    android:text="@string/set_register_icon"
+                    android:textColor="@color/common_text_color"
+                    android:textSize="@dimen/testSize18" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52.0dip"
+                android:layout_marginTop="34.0dip"
+                android:background="@drawable/bg_common_layout_stroke"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:paddingEnd="8.0dip"
+                android:paddingLeft="8.0dip">
+
+                <ImageView
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/register_user" />
+
+                <TextView
+                    style="@style/ocr_start_text_style"
+                    android:layout_marginStart="39.0dip"
+                    android:text="@string/set_register_name" />
+
+                <EditText
+                    android:id="@+id/edt_register_name"
+                    style="@style/ocr_end_text_style"
+                    android:layout_marginLeft="15.0dip"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:maxLength="5"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColorHint="@color/line_bg"
+                    android:textSize="@dimen/testSize18"
+                    tools:hint="本人真实姓名" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52.0dip"
+                android:background="@drawable/bg_common_layout_stroke"
+                android:paddingEnd="8.0dip"
+                android:paddingLeft="8.0dip">
+
+                <ImageView
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/idcard" />
+
+                <TextView
+                    style="@style/ocr_start_text_style"
+                    android:layout_marginStart="38.0dip"
+                    android:text="@string/set_register_idcard" />
+
+                <EditText
+                    android:id="@+id/edt_set_register_idcard"
+                    style="@style/ocr_end_text_style"
+                    android:layout_marginLeft="15.0dip"
+                    android:background="@null"
+                    android:digits="0123456789xX"
+                    android:gravity="end"
+                    android:inputType="number"
+                    android:maxLength="18"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColorHint="@color/line_bg"
+                    android:textSize="@dimen/testSize18"
+                    tools:hint="请输入身份证" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52.0dip"
+                android:background="@drawable/bg_common_layout_stroke"
+                android:paddingEnd="8.0dip"
+                android:paddingLeft="4.0dip">
+
+                <ImageView
+                    android:layout_width="35.0dip"
+                    android:layout_height="35.0dip"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/phone" />
+
+                <TextView
+                    style="@style/ocr_start_text_style"
+                    android:layout_marginStart="42.0dip"
+                    android:text="@string/set_register_phone" />
+
+                <EditText
+                    android:id="@+id/edt_set_register_phone_number"
+                    style="@style/ocr_end_text_style"
+                    android:layout_marginLeft="15.0dip"
+                    android:background="@null"
+                    android:digits="0123456789"
+                    android:gravity="end"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColorHint="@color/line_bg"
+                    android:textSize="@dimen/testSize18"
+                    tools:hint="请输入手机号码"
+                    tools:text="125156151515615156151561" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52.0dip"
+                android:background="@drawable/bg_common_layout_stroke"
+                android:paddingEnd="8.0dip"
+                android:paddingLeft="4.0dip">
+
+                <View style="@style/common_divide_line" />
+
+                <ImageView
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/address" />
+
+                <TextView
+                    style="@style/ocr_start_text_style"
+                    android:layout_marginStart="42.0dip"
+                    android:text="@string/set_register_family_address" />
+
+                <EditText
+                    android:id="@+id/edt_set_register_family_address"
+                    style="@style/ocr_end_text_style"
+                    android:layout_marginEnd="10.0dip"
+                    android:layout_marginStart="180.0dip"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColorHint="@color/line_bg"
+                    android:textSize="@dimen/testSize18"
+                    tools:hint="请输入家庭住址" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/show_vip_aera"
+                android:layout_width="match_parent"
+                android:layout_height="52.0dip"
+                android:background="@drawable/bg_common_layout_stroke"
+                android:paddingEnd="8.0dip"
+                android:paddingLeft="4.0dip"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="42.0dip"
+                    android:layout_height="42.0dip"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/vip" />
+
+                <TextView
+                    style="@style/ocr_start_text_style"
+                    android:layout_marginStart="42.0dip"
+                    android:text="@string/set_register_vip_level" />
+
+                <android.support.v7.widget.AppCompatRatingBar
+                    android:id="@+id/user_set_vip_level"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:theme="@style/RatingBar"
+                    tools:rating="3" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/show_black_people_aera"
+                android:layout_width="match_parent"
+                android:layout_height="52.0dip"
+                android:background="@drawable/bg_common_layout_stroke"
+                android:paddingEnd="8.0dip"
+                android:paddingLeft="8.0dip"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/black_people" />
+
+                <TextView
+                    style="@style/ocr_start_text_style"
+                    android:layout_marginStart="38.0dip"
+                    android:text="@string/set_register_black_people" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

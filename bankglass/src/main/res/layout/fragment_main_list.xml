@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/vip_list_bg"
     android:clipToPadding="true"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
@@ -25,14 +24,16 @@
             android:textColor="@color/text_tab_color"
             android:textSize="@dimen/testSize16" />
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/face_decet_list"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:fastScrollEnabled="true"
-            android:scrollbarStyle="insideInset"
-            android:scrollbars="none"
-            android:transcriptMode="normal" />
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/face_swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/face_decet_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v4.widget.SwipeRefreshLayout>
 
     </ViewSwitcher>
 

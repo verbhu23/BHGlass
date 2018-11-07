@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/glass_header_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="15.0dip"
+        android:paddingTop="15.0dip">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/set_item_height"
+            android:background="@drawable/bg_edt_login"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="22.0dip"
+                android:layout_height="22.0dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/login_user" />
+
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ."
+                android:hint="@string/login_username"
+                android:imeOptions="actionNext"
+                android:inputType="textNoSuggestions"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:paddingBottom="13.0dip"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:paddingTop="13.0dip"
+                android:singleLine="true"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/testSize16" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/common_text_color" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_edt_login"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="22.0dip"
+                android:layout_height="22.0dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/login_pwd" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ."
+                android:hint="@string/login_password"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword|textNoSuggestions"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:paddingBottom="13.0dip"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:paddingTop="13.0dip"
+                android:singleLine="true"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/testSize16"
+                tools:text="sdsdsdsdsdsdsdsdssdsdsd" />
+
+            <ImageView
+                android:id="@+id/register_iv_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:paddingRight="16.0dip"
+                android:src="@drawable/btn_clear"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/clr_login_frame_weight" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_edt_login"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="22.0dip"
+                android:layout_height="22.0dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/login_pwd" />
+
+            <EditText
+                android:id="@+id/et_password_confirm"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ."
+                android:hint="@string/login_password_confirm"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword|textNoSuggestions"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:paddingBottom="13.0dip"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:paddingTop="13.0dip"
+                android:singleLine="true"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/testSize16" />
+
+            <ImageView
+                android:id="@+id/register_iv_clear_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:paddingRight="16.0dip"
+                android:src="@drawable/btn_clear"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/clr_login_frame_weight" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_edt_login"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="22.0dip"
+                android:layout_height="22.0dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/login_reset" />
+
+            <EditText
+                android:id="@+id/et_password_find"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:background="@color/clr_login_input_bg"
+                android:cursorVisible="true"
+                android:digits="0123456789"
+                android:hint="@string/btn_password_find"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions|number"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:paddingBottom="13.0dip"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:paddingTop="13.0dip"
+                android:singleLine="true"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/testSize16" />
+
+            <ImageView
+                android:id="@+id/register_iv_clear_find"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:paddingRight="16.0dip"
+                android:src="@drawable/btn_clear"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/clr_login_frame_weight" />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15.0dip"
+            android:background="@drawable/selector_btn_login"
+            android:enabled="true"
+            android:paddingBottom="13.0dip"
+            android:paddingLeft="16.0dip"
+            android:paddingRight="16.0dip"
+            android:paddingTop="13.0dip"
+            android:text="@string/btn_sign_up_finish"
+            android:textColor="@color/text_white_orange_style"
+            android:textSize="@dimen/testSize20" />
+
+    </LinearLayout>
+
+</LinearLayout>

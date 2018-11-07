@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="@dimen/bar_height"
-    android:background="@color/header_bg"
+    android:background="@drawable/toolbar_bg"
     android:orientation="horizontal">
 
     <RelativeLayout
@@ -14,8 +15,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/arrow_left_style"
-            android:gravity="center" />
+            android:layout_centerInParent="true"
+            android:background="@drawable/arrow_left_style" />
     </RelativeLayout>
 
     <TextView
@@ -27,20 +28,23 @@
         android:gravity="center_vertical"
         android:maxLines="1"
         android:textColor="@color/white"
-        android:textSize="@dimen/testSize21" />
+        android:textSize="@dimen/testSize21"
+        tools:text="我是标题" />
 
     <TextView
         android:id="@+id/tv_action_end"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="12.0dip"
         android:ellipsize="end"
+        android:gravity="center_vertical"
         android:maxLines="1"
+        android:paddingEnd="12.0dip"
+        android:singleLine="true"
         android:textColor="@color/text_white_orange_style"
         android:textSize="@dimen/testSize21"
-        android:visibility="gone" />
+        android:visibility="gone"
+        tools:text="我是尾部导航" />
 
     <ImageButton
         android:id="@+id/ib_action_end"
@@ -49,6 +53,7 @@
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="12.0dip"
-        android:visibility="gone" />
+        android:visibility="gone"
+        tools:background="@drawable/action_vip_n" />
 
 </RelativeLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/glass_header_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10.0dip"
+        android:layout_marginStart="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:background="@drawable/bg_face_lib_group_detail">
+
+        <ImageView
+            android:id="@+id/iv_user_header"
+            android:layout_width="140.0dip"
+            android:layout_height="140.0dip"
+            android:layout_margin="10.0dip"
+            android:scaleType="center"
+            tools:background="@drawable/pic_z" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_toEndOf="@+id/iv_user_header"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:textColor="@color/clr_black"
+                android:textSize="@dimen/testSize21"
+                tools:text="dskdjskjds" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_user_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="@color/clr_black"
+                    android:textSize="@dimen/testSize16"
+                    tools:text="dskdjskjds" />
+
+                <TextView
+                    android:id="@+id/tv_user_idcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3.0dip"
+                    android:maxLength="18"
+                    android:maxLines="1"
+                    android:textColor="@color/clr_black"
+                    android:textSize="@dimen/testSize16"
+                    tools:text="dsdsdsdsdsdsdsdsdssd" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52.0dip"
+        android:layout_marginTop="20.0dip"
+        android:background="@color/white"
+        android:paddingEnd="8.0dip"
+        android:paddingLeft="8.0dip">
+
+        <View style="@style/common_divide_line" />
+
+        <ImageView
+            android:layout_width="35.0dip"
+            android:layout_height="35.0dip"
+            android:layout_centerVertical="true"
+            android:background="@drawable/phone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="38.0dip"
+            android:text="@string/set_register_phone"
+            android:textColor="@color/common_text_color"
+            android:textSize="@dimen/testSize18" />
+
+        <TextView
+            android:id="@+id/tv_user_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10.0dip"
+            android:maxLines="1"
+            android:textColor="@color/clr_black"
+            android:textSize="@dimen/testSize18"
+            tools:text="12123123121" />
+
+        <View
+            style="@style/common_divide_line"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52.0dip"
+        android:background="@color/white"
+        android:paddingEnd="8.0dip"
+        android:paddingLeft="8.0dip">
+
+        <ImageView
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_centerVertical="true"
+            android:background="@drawable/address" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="38.0dip"
+            android:text="@string/set_register_family_address"
+            android:textColor="@color/common_text_color"
+            android:textSize="@dimen/testSize18" />
+
+        <TextView
+            android:id="@+id/tv_user_family_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10.0dip"
+            android:layout_marginStart="10.0dip"
+            android:layout_toRightOf="@+id/tv_address"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="2"
+            android:textColor="@color/clr_black"
+            android:textSize="@dimen/testSize16"
+            tools:text="1考得好几是交互考sds得好几是交互考得好几是交互考得好几是2234交互考得好几是交互" />
+
+        <View
+            style="@style/common_divide_line"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/show_vip_aera"
+        android:layout_width="match_parent"
+        android:layout_height="52.0dip"
+        android:background="@color/white"
+        android:paddingEnd="8.0dip"
+        android:paddingLeft="8.0dip"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_centerVertical="true"
+            android:background="@drawable/vip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="38.0dip"
+            android:text="@string/set_register_vip_level"
+            android:textColor="@color/common_text_color"
+            android:textSize="@dimen/testSize18" />
+
+        <android.support.v7.widget.AppCompatRatingBar
+            android:id="@+id/user_set_vip_level"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10.0dip"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:theme="@style/RatingBar"
+            tools:rating="3" />
+
+        <View
+            style="@style/common_divide_line"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+</LinearLayout>

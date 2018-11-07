@@ -18,15 +18,14 @@
     <application
         android:name=".global.GlassApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo1"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:theme="@style/GlassAppTheme"
         tools:replace="android:allowBackup">
 
         <activity
-            android:name=".home.SplashActivity"
+            android:name=".home.login.SplashActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
@@ -37,19 +36,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".home.login.RegisterActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".home.login.LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".home.login.ResetPwdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
         <activity
             android:name=".home.MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|stateHidden|adjustPan" />
+            android:screenOrientation="portrait" />
 
         <activity
-            android:name=".home.master.FaceSimDetailActivity"
+            android:name=".home.master.FaceSimilarityDetailActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/Dialog_style" />
+            android:theme="@style/dialog_style" />
 
         <activity
             android:name=".home.master.VIPListActivity"
@@ -58,17 +78,10 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".home.master.FaceSimListActivity"
+            android:name=".home.master.FaceSimilarityListActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".home.login.LoginActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
             android:name=".home.settings.RecognizeModeActivity"
@@ -84,11 +97,42 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".home.settings.RecoilRegisterActivity"
+            android:name=".home.settings.FaceLibraryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".home.settings.FaceLibraryGroupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".home.settings.FaceLibGroupDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".home.settings.FaceLibRegisterActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".home.settings.FaceLibEditActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".home.session.LargerImageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
 
         <provider
             android:name=".utils.MyGlassProvider"

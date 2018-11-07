@@ -12,7 +12,7 @@
         android:layout_width="120.0dip"
         android:layout_height="120.0dip"
         android:layout_gravity="center_horizontal"
-        tools:background="@drawable/userimg" />
+        tools:background="@drawable/pic_z" />
 
     <TextView
         android:id="@+id/tv_user_name"
@@ -20,10 +20,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="5.0dip"
-        tools:text="庄心妍"
         android:textColor="@color/vip_level_normal"
         android:textSize="@dimen/testSize18"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:text="庄心妍" />
 
     <android.support.v7.widget.AppCompatRatingBar
         android:id="@+id/rat_vip_level"
@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:isIndicator="false"
+        android:isIndicator="true"
         android:numStars="5"
         android:rating="3"
         android:theme="@style/RatingBar" />
@@ -39,11 +39,12 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="26.0dip"
-        android:layout_marginRight="26.0dip"
+        android:layout_marginLeft="12.0dip"
+        android:layout_marginRight="12.0dip"
         android:layout_marginTop="22.0dip">
 
         <TextView
+            android:id="@+id/tv_title_idcard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/user_info_idcard"
@@ -55,7 +56,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_marginLeft="25.0dip"
+            android:layout_marginStart="15.0dip"
+            android:layout_toEndOf="@+id/tv_title_idcard"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:singleLine="true"
             android:textColor="#ffababab"
             android:textSize="@dimen/testSize16"
             tools:text="42900419880808888" />
@@ -64,8 +69,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="26.0dip"
-        android:layout_marginRight="26.0dip"
+        android:layout_marginLeft="12.0dip"
+        android:layout_marginRight="12.0dip"
         android:layout_marginTop="8.0dip">
 
         <TextView
@@ -81,7 +86,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_marginLeft="25.0dip"
+            android:layout_marginStart="15.0dip"
             android:layout_toEndOf="@+id/tv_address"
             android:ellipsize="end"
             android:gravity="end"

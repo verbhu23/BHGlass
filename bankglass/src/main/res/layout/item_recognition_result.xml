@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="13.0dp"
+    android:layout_marginStart="13.0dp"
+    android:layout_marginTop="10.0dp"
+    android:layout_marginBottom="10.0dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:duplicateParentState="true"
+        android:orientation="horizontal"
+        android:padding="5.0dip">
+
+        <ImageView
+            android:id="@+id/record_iv_thumbnail"
+            android:layout_width="38.0dp"
+            android:layout_height="38.0dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/pic_z" />
+
+        <RelativeLayout
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15.0dp"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_name_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/user_show_is_vip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/face_result_item_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5.0dip"
+                        android:paddingBottom="2.0dp"
+                        android:paddingLeft="8.0dp"
+                        android:paddingRight="8.0dp"
+                        android:paddingTop="2.0dp"
+                        android:textSize="@dimen/testSize14"
+                        android:visibility="gone"
+                        tools:background="@drawable/bg_face_sim_vip_txt"
+                        tools:text="普通用户" />
+
+                    <ImageView
+                        android:id="@+id/iv_show_is_vip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/is_vip_type"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/recognition_result_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:maxLines="1"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/testSize16"
+                    tools:text="刘德华梁朝伟啊" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/recognition_result_id_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_name_area"
+                android:duplicateParentState="true"
+                android:maxLength="18"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:textSize="@dimen/testSize14"
+                tools:text="1sss235sss745454654544554ssssss5" />
+
+            <RelativeLayout
+                android:id="@+id/attention_item_similar_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15.0dp"
+                android:layout_marginLeft="20.0dp">
+
+                <TextView
+                    android:id="@+id/tv_face_sim_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/testSize18"
+                    android:textStyle="italic"
+                    tools:text="80%" />
+
+                <ProgressBar
+                    android:id="@+id/pg_sim_progress"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="30.0dp"
+                    android:layout_height="5.0dp"
+                    android:layout_below="@+id/tv_face_sim_size"
+                    android:layout_marginTop="5.0dp"
+                    android:max="100"
+                    android:progressDrawable="@drawable/progress_img"
+                    tools:progress="80" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
